@@ -1,0 +1,709 @@
+/*========Common part Css start=======/*/
+* {
+    padding: 0;
+    margin: 0;
+    outline: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+ol,
+ul {
+    list-style-type: none;
+}
+
+img {
+    vertical-align: middle;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/*=======Common part Css End=========*/
+
+/*=======Font part Css Start=========*/
+@font-face {
+    font-family: 'Alata', sans-serif;
+}
+
+/*=======Font part Css End=========*/
+
+/*=======Navbar part Css Start=========*/
+.navbar-bg {
+    position: absolute;
+    z-index: 9999999;
+    background: none;
+}
+
+.navbar ul li {
+    position: relative;
+    padding: 0 20px;
+}
+
+.navbar ul li a {
+    color: #ffffff;
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+    line-height: 50px;
+    position: relative;
+    transition: all linear.3s;
+}
+
+.navbar ul li a::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background: #fe0040;
+    transition: all linear.3s;
+}
+
+.navbar ul li a:hover::after {
+    opacity: 1;
+}
+
+.navbar ul li a:hover {
+    color: #fe0040;
+}
+
+.menu {
+    color: #ffffff;
+    letter-spacing: 1;
+}
+
+.navbar-brand h2 {
+    font-size: 48px;
+    color: #fe0040;
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+}
+
+.navbar-brand span {
+    color: #ffffff;
+}
+
+
+/* Header */
+.mobile-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+    color: #fe0040;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100vh;
+    background: #101A24;
+    z-index: 9999;
+    transition: left 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+}
+
+.mobile-nav.active {
+    left: 0;
+}
+
+.nav-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 20px;
+}
+
+.close-btn {
+    font-size: 38px;
+    color: #fe0040;
+    cursor: pointer;
+}
+
+/* Menu Links */
+.nav-links {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.nav-links li {
+    margin: 15px 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    font-size: 20px;
+    color: #ffffff;
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+    line-height: 50px;
+    padding-bottom: 15px;
+    position: relative;
+    transition: all linear.3s;
+}
+
+.nav-links a::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 1px;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    background: #fe0040;
+    transition: all linear.3s;
+}
+
+.nav-links a:hover::after {
+    opacity: 1;
+}
+
+.nav-links a:hover {
+    color: #fe0040;
+}
+
+.mobile-header,
+.mobile-nav {
+    display: none;
+}
+
+/* Small screens only */
+@media (max-width: 991px) {
+
+    .mobile-header,
+    .mobile-nav {
+        display: block;
+    }
+
+    .desktop-navbar {
+        display: none !important;
+    }
+}
+
+/*=======Navbar part Css End=========*/
+
+/*=======Banner part Css Start=========*/
+.banner-bg {
+    background: url(../img/Banner.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    position: relative;
+    padding: 200px 0;
+}
+
+.banner-bg::after {
+    position: absolute;
+    content: '';
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(4, 4, 4, 0.7);
+}
+
+.banner {
+    position: relative;
+    z-index: 99999;
+}
+
+.banner .content h1 {
+    color: #ffffff;
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+    font-size: 25px;
+    padding: 60px 0 0 0;
+}
+
+.banner .content h2 {
+    color: #ffffff;
+    font-family: 'Alata', sans-serif;
+    font-weight: 600;
+    font-size: 40px;
+    position: relative;
+}
+
+.banner .content span {
+    color: #fe0040;
+}
+
+.banner .text p {
+    color: #ffffff;
+    font-family: 'Alata', sans-serif;
+    font-size: 17px;
+    padding-top: 10px;
+}
+
+.banner .btn,
+.card .btn {
+    background: #fe0040;
+    color: #ffffff;
+    font-size: 17px;
+    font-family: 'Alata', sans-serif;
+    padding: 10px 30px;
+    margin-top: 20px;
+    transition: all linear .3s;
+    text-decoration: none;
+    cursor: pointer;
+    box-shadow: none;
+}
+
+.banner .btn:hover,
+.card .btn:hover {
+    background: none;
+    color: #fe0040;
+    border: 1px solid #fe0040;
+}
+
+/*=======Banner part Css End=========*/
+
+/*=======About part Css Start=========*/
+.about-bg {
+    padding: 80px 0;
+}
+
+.about .head h1 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 80px;
+    font-family: 'Alata', sans-serif;
+    color: #000000;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.about .head h1::after,
+.contact .head h1::after,
+.skill .head h1::after {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    background: #fe0040;
+    margin-left: 48%;
+}
+
+.about-image {
+    display: flex;
+    align-items: center;
+}
+
+.about img {
+    width: 170px;
+    height: 170px;
+    /* margin: 20px 0 0 50px; */
+    border-radius: 50%;
+}
+
+.about .para {
+    margin-left: 50px;
+}
+
+.about .para h1 {
+    color: #fe0040;
+    font-family: 'Alata', sans-serif;
+    font-weight: 800;
+    font-size: 30px;
+    padding: 20px 0 0 0;
+}
+
+.about .para p {
+    color: #000000;
+    font-family: 'Alata', sans-serif;
+    font-size: 17px;
+    padding: 10px 0 0 0;
+    text-align: justify;
+}
+
+.about .para a {
+    background: #fe0040;
+    color: #ffffff;
+    font-size: 17px;
+    font-family: 'Alata', sans-serif;
+    padding: 10px 30px;
+    margin: 10px 0 0 0;
+    border: 2px solid #fe0040;
+    border-radius: 50px;
+    transition: all linear .3s;
+}
+
+.about .para a:hover {
+    background: #ffffff;
+    color: #fe0040;
+    border: 2px solid #fe0040;
+}
+
+/*=======About part Css End=========*/
+
+/*=======Service part css start=======*/
+.service-bg {
+    padding: 80px 0;
+    background: #000000;
+}
+
+.service .head h1 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 80px;
+    font-family: 'Alata', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.service .head h1::after,
+.project .head h1::after {
+    position: absolute;
+    content: '';
+    width: 40px;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    opacity: 1;
+    background: #ffffff;
+    margin-left: 48%;
+}
+
+.service .service-icon i {
+    font-size: 35px;
+    color: #fe0040;
+    padding-bottom: 8px;
+    transition: all linear .3s;
+    padding: 10px 0 15px 0;
+}
+
+.service .service-info {
+    background: #222222;
+    text-align: center;
+    padding: 15px 15px;
+    transition: all linear .3s;
+}
+
+.service-info:hover {
+    background: #fe0040;
+}
+
+.service-info:hover h3,
+.service-info:hover p,
+.service-info:hover i {
+    color: #ffffff;
+}
+
+.service .service-content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Alata', sans-serif;
+    color: #ffffff;
+    padding-bottom: 10px;
+    transition: all linear .3s;
+}
+
+.service .service-content p {
+    font-size: 15px;
+    font-family: 'Alata', sans-serif;
+    color: #f0f0f0;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    transition: all linear .3s;
+}
+
+/*=======Service part css End========*/
+
+/*=======Skill part css Start========*/
+.skill-bg {
+    padding: 80px 0;
+}
+
+.skill .head h1 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 80px;
+    font-family: 'Alata', sans-serif;
+    color: #000000;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.skill .text h3 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Alata', sans-serif;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.skill .text p {
+    font-size: 17px;
+    font-family: 'Alata', sans-serif;
+    color: #2f2f2f;
+    padding-right: 30px;
+    letter-spacing: 0.5px;
+    text-align: justify;
+    padding-right: 20px;
+    line-height: 22px;
+}
+
+.skill .text .btn {
+    background: #fe0040;
+    color: #ffffff;
+    font-size: 16px;
+    font-family: 'Alata', sans-serif;
+    padding: 8px 20px;
+    border: 2px solid #fe0040;
+    transition: all linear .3s;
+}
+
+.skill .text .btn:hover {
+    color: #fe0040;
+    background: #ffffff;
+}
+
+.skill .info {
+    justify-content: space-between;
+}
+
+.skill .info span {
+    color: #000000;
+    font-size: 15px;
+    font-family: 'Alata', sans-serif;
+    font-weight: 500;
+    margin: 10px 0 10px 10px;
+}
+
+.skill .content .line {
+    height: 13px;
+    width: 100%;
+    background: #adadad;
+    border-radius: 50px;
+    position: relative;
+}
+
+.skill .content .line::before {
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 0;
+    background: #fe0040;
+    border-radius: 50px;
+    top: 0;
+    left: 0;
+    transition: width 3s ease;
+}
+
+/* Final widths after scroll */
+.skill .content .html.animated::before {
+    width: 95%;
+}
+
+.skill .content .css.animated::before {
+    width: 85%;
+}
+
+.skill .content .boots.animated::before {
+    width: 70%;
+}
+
+/*=======Skill part css End========*/
+
+/*=======project part css start========*/
+.project-bg {
+    padding: 80px 0;
+    background: #000000;
+}
+
+.project .head h1 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 80px;
+    font-family: 'Alata', sans-serif;
+    color: #ffffff;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.project .project-img img {
+    width: 120px;
+    height: 120px;
+    margin-top: 10px;
+    border-radius: 50%;
+    border: solid 4px #fe0040;
+    transition: all linear .3s;
+}
+
+.project .project-info {
+    background: #222222;
+    text-align: center;
+    padding: 10px 15px;
+    transition: all linear .3s;
+}
+
+.project-info:hover {
+    background: #fe0040;
+}
+
+.project-info:hover h3,
+.project-info:hover p {
+    color: #ffffff;
+}
+
+.project-info:hover img {
+    border: solid 4px #ffffff;
+}
+
+.project .project-content h3 {
+    font-size: 20px;
+    font-weight: 500;
+    font-family: 'Alata', sans-serif;
+    color: #ffffff;
+    padding: 10px 0;
+    transition: all linear .3s;
+}
+
+.project .project-content p {
+    font-size: 15px;
+    font-family: 'Alata', sans-serif;
+    color: #f0f0f0;
+    transition: all linear .3s;
+}
+
+/*=======project part css End========*/
+
+/*=======Contact part Css Start=========*/
+.contact-bg {
+    padding: 80px 0;
+    position: relative;
+}
+
+.contact .head h1 {
+    font-size: 30px;
+    font-weight: 900;
+    line-height: 80px;
+    font-family: 'Alata', sans-serif;
+    color: #000000;
+    text-align: center;
+    position: relative;
+    margin-bottom: 50px;
+}
+
+.contact .contact-info h5 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Alata', sans-serif;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.contact .contact-info p {
+    font-size: 15px;
+    font-family: 'Alata', sans-serif;
+    color: #2f2f2f;
+    padding-right: 30px;
+}
+
+.contact .single-info .icon {
+    width: 30px;
+    height: 30px;
+    color: #fe0040;
+    margin-top: 7px;
+}
+
+.contact .single-info .info h6 {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Alata', sans-serif;
+    color: #000000;
+    margin-top: 15px;
+}
+
+.contact .single-info .info p {
+    font-size: 14px;
+    font-family: 'Alata', sans-serif;
+    color: #2f2f2f;
+}
+
+.contact .contact-widget h5 {
+    font-size: 18px;
+    font-weight: 700;
+    font-family: 'Alata', sans-serif;
+    color: #000000;
+    margin-bottom: 20px;
+}
+
+.contact .contact-widget .btn {
+    background: #fe0040;
+    color: #ffffff;
+    font-size: 17px;
+    font-family: 'Alata', sans-serif;
+    padding: 10px 30px;
+    border: 2px solid #fe0040;
+    transition: all linear .3s;
+}
+
+.contact .contact-widget .btn:hover {
+    color: #fe0040;
+    background: #ffffff;
+}
+
+/*=======Contact part Css End=========*/
+
+/*=======Copyright part Css Start=========*/
+.copyright-bg {
+    padding: 20px 0;
+    background: #000000;
+}
+
+.copyright-text {
+    font-size: 15px;
+    font-weight: 500;
+    font-family: 'Alata', sans-serif;
+    color: #ffffff;
+    text-align: center;
+}
+
+.copyright-text span {
+    color: #fe0040;
+}
+
+/*=======Copyright part Css End=========*/
+
+/*======= Scroll Top ========*/
+#scrollTopBtn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  z-index: 999;
+  border: none;
+  outline: none;
+  background-color: #fe0040;
+  color: white;
+  cursor: pointer;
+  padding: 8px 15px;
+  font-size: 17px;
+  border-radius: 4px;
+  display: none; 
+}
+
